@@ -24,6 +24,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="loadInformation"
-        android:text="@string/load_information" />
+        android:onClick="logInformation"
+        android:text="@string/log_information" />
 </LinearLayout>
