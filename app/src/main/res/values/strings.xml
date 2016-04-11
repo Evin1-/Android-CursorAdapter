@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SQLiteCursorAdapter</string>
+    <string name="fill_database">Fill database</string>
+    <string name="load_information">Load information</string>
 </resources>
