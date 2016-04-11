@@ -9,11 +9,11 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class UsersDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "usersDB";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String TABLE_USERS = "users";
 
-    public static final String KEY_USER_ID = "id";
+    public static final String KEY_USER_ID = "_id";
     public static final String KEY_USER_NAME = "userName";
     public static final String KEY_AGE = "age";
 

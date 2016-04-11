@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,5 +68,18 @@ public class MainActivity extends AppCompatActivity {
                 cursor.close();
             }
         }
+    }
+
+    public void fillListView(View view) {
+        UsersDatabaseHelper usersDatabaseHelper = new UsersDatabaseHelper(getApplicationContext());
+
+        final String POSTS_SELECT_QUERY = "SELECT * FROM users";
+
+        SQLiteDatabase db = usersDatabaseHelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery(POSTS_SELECT_QUERY, null);
+
+        ListView lvItems = (ListView) findViewById(R.id.a_main_listview);
+        CustomAdapter todoAdapter = new CustomAdapter(this, cursor, 0);
+        lvItems.setAdapter(todoAdapter);
     }
 }

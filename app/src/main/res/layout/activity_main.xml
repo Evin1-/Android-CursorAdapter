@@ -26,4 +26,16 @@
         android:layout_height="wrap_content"
         android:onClick="logInformation"
         android:text="@string/log_information" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="fillListView"
+        android:text="@string/fill_listview" />
+
+    <ListView
+        android:id="@+id/a_main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>
